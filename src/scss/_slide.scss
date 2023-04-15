@@ -1,0 +1,49 @@
+@import 'swiper/swiper-bundle.css';
+.swiper {
+    width: 80%;
+    height: 80%;
+    margin:20px auto;
+  }
+  
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 400px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    transition: all .5s ease;
+    filter: grayscale(1);
+    &:hover{
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .swiper{
+        width: 100%;
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+  }
+
+  .swiper-button-next{
+    transition: all .5s;
+    &:hover{
+      padding-left: 20px;
+    }
+  }
+  .swiper-button-prev{
+    transition: all .5s;
+    &:hover{
+      padding-right: 20px;
+    }
+  }
